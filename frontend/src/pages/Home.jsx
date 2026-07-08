@@ -18,7 +18,7 @@ export default function Home() {
 
         {/* Navigation Tabs */}
         <div className="flex gap-2 mb-8 flex-wrap">
-          <button
+          {/* <button
             onClick={() => setActiveTab("progress")}
             className={`px-6 py-2 rounded font-semibold transition ${
               activeTab === "progress"
@@ -27,8 +27,8 @@ export default function Home() {
             }`}
           >
             Progress Calculator
-          </button>
-          <button
+          </button> */}
+          {/* <button
             onClick={() => setActiveTab("barWeight")}
             className={`px-6 py-2 rounded font-semibold transition ${
               activeTab === "barWeight"
@@ -37,13 +37,13 @@ export default function Home() {
             }`}
           >
             Bar Weight
-          </button>
+          </button> */}
         </div>
 
         {/* Component Render */}
         <div className="flex justify-center">
           {activeTab === "progress" && <ProgressCalculator />}
-          {activeTab === "barWeight" && <GetBarWeight />}
+          {/* {activeTab === "barWeight" && <GetBarWeight />} */}
         </div>
       </div>
     </div>

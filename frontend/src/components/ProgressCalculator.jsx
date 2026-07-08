@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import RunnerV1 from "../assets/image3.gif";
+// import RunnerV1 from "../assets/image3.gif";
 
 export default function ProgressCalculator() {
   const [previousMaxWeight, setPreviousMaxWeight] = useState("");
@@ -66,7 +66,7 @@ export default function ProgressCalculator() {
       <div className="space-y-4 mb-6">
         <div>
           <label className="block text-sm font-semibold mb-2 text-white">
-            Previous Max Weight (lbs)
+            Previous (lbs)
           </label>
           <input
             type="number"
@@ -79,7 +79,7 @@ export default function ProgressCalculator() {
 
         <div>
           <label className="block text-sm font-semibold mb-2 text-white">
-            Current Max Weight (lbs)
+            Current (lbs)
           </label>
           <input
             type="number"
@@ -118,25 +118,6 @@ export default function ProgressCalculator() {
       {/* Results Section */}
       {improvementPercentage !== null && (
         <div className="space-y-4 animate-fadeIn">
-          {/* Celebration Animation */}
-          {/* <div className="flex justify-center mb-4">
-            <img
-              src={RunnerV1}
-              alt="celebration"
-              style={{ width: "80px", height: "80px" }}
-              className="animate-bounce"
-            />
-          </div> */}
-
-          {/* Weight Gained */}
-          {/* <div className="bg-slate-700 rounded p-4">
-            <p className="text-sm text-slate-400 mb-1">Weight Gained</p>
-            <p className="text-3xl font-bold text-blue-400">
-              +{weightGained.toFixed(1)} lbs
-            </p>
-          </div> */}
-
-          {/* Improvement Percentage */}
           <div
             className={`rounded p-4 ${
               improvementPercentage >= 0
@@ -144,17 +125,9 @@ export default function ProgressCalculator() {
                 : "bg-gradient-to-r from-orange-600 to-red-600"
             }`}
           >
-            {/* <p className="text-sm text-white/80 mb-1">Improvement</p> */}
             <p className="text-3xl font-bold text-white">
               {improvementPercentage >= 0 ? "+" : ""}
               {improvementPercentage}%
-            </p>
-          </div>
-
-          {/* Breakdown */}
-          <div className="bg-slate-700 rounded p-4 text-sm text-slate-300">
-            <p>
-              {previousMaxWeight} lbs → {currentMaxWeight} lbs
             </p>
           </div>
         </div>
