@@ -111,7 +111,7 @@ export default function ProgressCalculator() {
           onClick={handleReset}
           className="flex-1 bg-slate-600 hover:bg-slate-700 text-white font-semibold py-2 rounded transition"
         >
-          Reset
+          Clear
         </button>
       </div>
 
